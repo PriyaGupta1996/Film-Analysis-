@@ -16,11 +16,13 @@
     "cypress": "12.3.0",
     "dotenv": "^16.0.3",
     "fs": "0.0.1-security",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/jest": "29.2.5",
@@ -39,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"https://app.codescreen.com"
+  "proxy": "https://app.codescreen.com"
 }
