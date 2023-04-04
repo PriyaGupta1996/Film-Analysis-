@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 const filmsEndpointURL = "/api/assessments/films";
 import Films from "../Films";
-
+import { v4 } from "uuid";
 const InputForm = () => {
   const [name, setName] = useState("");
   const [filmData, setFilmData] = useState([]);
@@ -45,7 +45,7 @@ const InputForm = () => {
       </div>
       {show && (
         <div>
-          <Films filmData={filmData} />
+          <Films filmData={filmData} key={v4()} />
         </div>
       )}
     </>
