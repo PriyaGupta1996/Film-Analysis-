@@ -1,7 +1,6 @@
 import { useState } from "react";
-const axios = require("axios");
-
-const filmsEndpointURL = "https://app.codescreen.com/api/assessments/films";
+import axios from "axios";
+const filmsEndpointURL = "/api/assessments/films";
 
 const InputForm = () => {
   const [name, setName] = useState("");
@@ -9,6 +8,9 @@ const InputForm = () => {
   const OnSubmitHandler = async (name) => {
     const filmData = await axios.get(filmsEndpointURL, {
       params: { directorName: name },
+      headers: {
+        Authorization: "Bearer 8c5996d5-fb89-46c9-8821-7063cfbc18b1",
+      },
     });
     console.dir(filmData, { depth: null });
   };
