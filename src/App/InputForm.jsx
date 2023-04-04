@@ -23,23 +23,31 @@ const InputForm = () => {
 
   return (
     <>
-      <div id="input-form" className="enter-director-name">
-        <input
-          type="text"
-          placeholder="Enter director name"
-          className="director-name-input-box"
-          id="input-box"
-          onChange={(e) => setName(e.target.value)}
-        ></input>
-        <button
-          className="submit-button"
-          id="submit-button"
-          onClick={OnSubmitHandler}
-        >
-          <span className="submit-button-text">Submit</span>
-        </button>
+      <div id="input-form" className="director-name-input-box">
+        <div className="enter-director-name">
+          <input
+            type="text"
+            placeholder="Enter director name"
+            className="enter-director-name"
+            id="input-box"
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div>
+          <button
+            className="submit-button"
+            id="submit-button"
+            onClick={OnSubmitHandler}
+          >
+            <span className="submit-button-text">Submit</span>
+          </button>
+        </div>
       </div>
-      {show && <Films filmData={filmData} />}
+      {show && (
+        <div>
+          <Films filmData={filmData} />
+        </div>
+      )}
     </>
   );
 };

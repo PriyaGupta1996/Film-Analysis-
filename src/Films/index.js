@@ -144,21 +144,23 @@ export default class Films extends Component {
   render() {
     return (
       <div className="stats-boxes">
-        <div id="best-rated-film" className='stats-box'>
-          <span className='stats-box-heading'>Best Rated Film</span>
-          <span className='stats-box-info'>{this.state.bestRated}</span>
-        </div>
-        <div id="longest-film" className='stats-box'>
-          <span className='stats-box-heading'>Longest Film Duration</span>
-          <span className='stats-box-info'>{this.state.longestFilm}</span>
+        <div className="stats-box-row-1">
+          <div id="best-rated-film" className='stats-box'>
+            <p className='stats-box-heading'>Best Rated Film</p>
+            <p className='stats-box-info'>{this.state.bestRated}</p>
+          </div>
+          <div id="longest-film" className='stats-box stats-box-right '>
+            <p className='stats-box-heading'>Longest Film Duration</p>
+            <p className='stats-box-info'>{this.state.longestFilm}</p>
+          </div>
         </div>
         <div id="average-rating" className='stats-box'>
-          <span className='stats-box-heading'>Average Rating</span>
-          <span className='stats-box-info'>{this.state.averageFilm}</span>
+          <p className='stats-box-heading'>Average Rating</p>
+          <p className='stats-box-info'>{this.state.averageFilm}</p>
         </div>
-        <div id="shortest-days" className='stats-box'>
-          <span className='stats-box-heading'>Shortest days between releases</span>
-          <span className='stats-box-info'>{this.state.shortestDays}</span>
+        <div id="shortest-days" className='stats-box stats-box-right'>
+          <p className='stats-box-heading'>Shortest days between releases</p>
+          <p className='stats-box-info'>{this.state.shortestDays}</p>
         </div>
       </div >
     );
