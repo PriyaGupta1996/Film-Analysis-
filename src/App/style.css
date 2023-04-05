@@ -8,7 +8,8 @@
 }
 
 .enter-director-name {
-  height: 32px;
+  display: flex;
+  height: 40px;
   width: 151px;
   color: #87878A;
   font-size: 16px;
@@ -17,17 +18,22 @@
   margin-left: 24px;
   position: relative;
   bottom: 3px;
+  border: 0px;
+  padding-left: 20%;
 }
 
 .submit-button {
+  display: flex;
   height: 40px;
   width: 138px;
   border-radius: 10px;
   background-color: #FFBB4B;
   box-shadow: 0 10px 50px 0 rgba(255,187,75,0.2);
   margin: auto;
-  margin-top: 40px;
+  margin-top: 30px;
   cursor: pointer;
+  padding-right: 10%;
+  align-items: center;
 }
 
 .submit-button-text {
@@ -42,4 +48,5 @@
   position: relative;
   bottom: 7px;
   margin-left: 40px;
+  margin-bottom: 20px;
 }

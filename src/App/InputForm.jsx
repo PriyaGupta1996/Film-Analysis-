@@ -28,20 +28,18 @@ const InputForm = () => {
           <input
             type="text"
             placeholder="Enter director name"
-            className="enter-director-name"
             id="input-box"
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div>
-          <button
-            className="submit-button"
-            id="submit-button"
-            onClick={OnSubmitHandler}
-          >
-            <span className="submit-button-text">Submit</span>
-          </button>
-        </div>
+
+        <button
+          className="submit-button"
+          id="submit-button"
+          onClick={OnSubmitHandler}
+        >
+          <span className="submit-button-text">Submit</span>
+        </button>
       </div>
       {show && (
         <div>
