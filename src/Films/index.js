@@ -131,15 +131,19 @@ export default class Films extends Component {
       return 0;
 
     const filmsDate = films.map(film => (
-      new Date(film["releaseDate"])
+      new Date(film["releaseDate"]).getTime()
     ))
     filmsDate.sort()
     console.log(filmsDate)
-    const diffInMs = filmsDate[filmsDate.length - 1].getTime() - filmsDate[filmsDate.length - 2].getTime();
-    return Math.round(diffInMs / (1000 * 60 * 60 * 24));
+    let diff = Number.MAX_VALUE;
+    for (let i = 1; i < filmsDate.length; i++) {
+      const diffInMs = filmsDate[i] - filmsDate[i - 1];
+      if (diffInMs > 0)
+        diff = Math.min(diff, Math.round(diffInMs / (1000 * 60 * 60 * 24)));
+    }
+    return diff
+
   }
-
-
 
   render() {
     return (
